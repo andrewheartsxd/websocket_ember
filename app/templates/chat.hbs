@@ -1,0 +1,12 @@
+<p>This page shows off hitting a stub endpoint which simply returns what you type in.</p>
+
+<div class="message-box">
+  {{#each messages as |message|}}
+    <p>{{message.text}}</p>
+  {{/each}}
+</div>
+
+<div class="message-inputs">
+  {{input value=newMsgBody}}
+  <button {{action 'sendMsg'}}>Send Message</button>
+</div>
