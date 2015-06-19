@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('getName', {path: '/'});
   this.route('chat');
 });
 

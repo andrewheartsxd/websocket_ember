@@ -1,4 +1,4 @@
-<p>This page shows off hitting a stub endpoint which simply returns what you type in.</p>
+<h2>Chat Room</h2>
 
 <div class="message-box">
   {{#each messages as |message|}}
@@ -6,7 +6,8 @@
   {{/each}}
 </div>
 
-<div class="message-inputs">
-  {{input value=newMsgBody}}
-  <button {{action 'sendMsg'}}>Send Message</button>
-</div>
+<form {{action "sendMsg" on="submit"}}>
+  {{input placeholder="Type your message" value=newMsgBody}}
+  <button type="submit">Send Message</button>
+</form>
+

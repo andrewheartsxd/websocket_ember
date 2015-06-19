@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  needs: ['getName'],
   messages: null,
+
   init: function() {
     this._super();
     this.messages = Ember.A();
@@ -15,7 +17,6 @@ export default Ember.Controller.extend({
         console.log('closed');
     }, this);
   },
-  //message: '',
 
   myOpenHandler: function(event) {
     console.log('On open event has been called: ' + event);
@@ -23,10 +24,12 @@ export default Ember.Controller.extend({
 
   actions: {
     sendMsg: function() {
+      var myName = this.get('controllers.getName.nickname');
+      console.log(myName);
       var socket = this.get('websockets').socketFor('ws://localhost:7000/');
       var newMsgBody = this.get('newMsgBody');
       var message = {
-        nickName: "Andrew",
+        nickName: myName,
         msgBody: newMsgBody  
       };
       console.log(message);
