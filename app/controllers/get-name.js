@@ -6,7 +6,6 @@ export default Ember.Controller.extend({
   //},
   actions: {
     getName: function() {
-      //why does this only work for this.name????
       this.nickname = this.get('nickName');
       var newName = this.get('nickName');  
       console.log('newName: ' + newName);

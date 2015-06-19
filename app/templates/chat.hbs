@@ -1,12 +1,14 @@
 <h2>Chat Room</h2>
 
-<div class="message-box">
+<div id="messageHolder">
+<ul id="messages">
   {{#each messages as |message|}}
-    <p>{{message.text}}</p>
+    <li>{{message.text}}</li>
   {{/each}}
+</ul>
 </div>
 
-<form {{action "sendMsg" on="submit"}}>
+<form id="chatform" {{action "sendMsg" on="submit"}}>
   {{input placeholder="Type your message" value=newMsgBody}}
   <button type="submit">Send Message</button>
 </form>
