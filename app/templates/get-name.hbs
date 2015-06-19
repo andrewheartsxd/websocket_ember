@@ -1,8 +1,13 @@
-<div>Enter your nickname below:</div>
+<h2>Sample Chat App</h2>
 
-<form {{action "getName" on="submit"}}>
-  {{input placeholder="Your nickname" value=nickName}}
-  <button type="submit">Join the Chat!</button>
-</form>
+<div id="nickdiv">Enter your nickname below:
+
+  <form id="nameform" {{action "getName" on="submit"}}>
+    {{input placeholder="Your nickname" value=nickName}}
+    <button id="namebutton" type="submit">Join the Chat!</button>
+  </form>
+</div>
+
+
 
 

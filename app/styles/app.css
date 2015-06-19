@@ -5,10 +5,28 @@
 }
 
 html, body {
-  height: 100%;
-  margin: 0;
-  font: 13px Helvetica, Arial;
-  overflow: auto;
+    height: 100%;
+    margin: 0;
+    font: 13px Helvetica, Arial;
+  }
+
+#nickdiv {
+  padding: 5px;
+}
+
+#nameform {
+  padding: 5px;
+}
+
+h2 {
+  padding: 5px;
+}
+
+#namebutton {
+  background: rgb(130, 224, 255);
+  border: none; 
+  padding: 3px;
+  border-radius: 2px;
 }
 
 #chatform {
@@ -22,16 +40,19 @@ html, body {
 
 #chatform input {
     border: 0;
-    padding: 10px; 
-    width: 90%;
-    /*margin-right: .5%;*/*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 85%;
   }
 
-form button {
-    width: 8%;
+#chatbutton {
+    display: inline-block;
+    width: 12%;
     background: rgb(130, 224, 255);
     border: none; 
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
 #messages {
@@ -41,7 +62,7 @@ form button {
   }
   
 #messages li {
-    padding: 5px 10px;
+   padding: 5px 10px;
   }
   
 #messages li:nth-child(odd) {
